@@ -18045,7 +18045,8 @@ __webpack_require__.r(__webpack_exports__);
 var images = function images() {
   var imgPopup = document.createElement('div'),
       workSection = document.querySelector('.works'),
-      bigImage = document.createElement('img');
+      bigImage = document.createElement('img'),
+      body = document.querySelector('body');
   imgPopup.classList.add('popup');
   workSection.appendChild(imgPopup);
   imgPopup.style.justifyContent = 'center';
@@ -18058,12 +18059,14 @@ var images = function images() {
 
     if (target && target.classList.contains('preview')) {
       imgPopup.style.display = 'flex';
+      document.body.classList.add('body-lock');
       var path = target.parentNode.getAttribute('href');
       bigImage.setAttribute('src', path);
     }
 
     if (target && target.matches('div.popup')) {
       imgPopup.style.display = 'none';
+      document.body.classList.remove('body-lock');
     }
   });
 };

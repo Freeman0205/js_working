@@ -12,6 +12,9 @@ body {
   font-style: normal;
   color: #000000;
 }
+.body-lock {
+  overflow: hidden;
+}
 
 .status {
   display: block;
@@ -848,6 +851,8 @@ textarea:focus {
   height: 500px;
   z-index: 10;
 }
+
+
 
 .overlay {
   display: none;
