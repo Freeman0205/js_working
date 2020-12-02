@@ -26,8 +26,8 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display
     header.addEventListener('click', (e) => {
         const target = e.target;
         if (target &&
-            (target.classList.contains(tabSelector.replace(/\./,"")) || 
-        target.parentNode.classList.contains(tabSelector.replace(/\./,"")))) {
+            (target.classList.contains(tabSelector.replace(/\./, "")) || 
+        target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
             tab.forEach((item, i) => {
                 if (target == item || target.parentNode == item) {
                     hideTabContent();
